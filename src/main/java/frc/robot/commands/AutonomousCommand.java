@@ -24,6 +24,10 @@ public class AutonomousCommand extends Command {
   private final ClimbDown m_ClimbDown = new ClimbDown(m_ClimbSubsystem);
   private ScheduledExecutorService executor = Executors.newSingleThreadScheduledExecutor();
 
+  public AutonomousCommand() {
+    execute();
+  }
+
     private void scheduleDisable(long timeToWait) {
       executor.scheduleWithFixedDelay(AutonomousCommand::disable, 0, timeToWait, TimeUnit.SECONDS);
     }
