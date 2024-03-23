@@ -28,7 +28,7 @@ import edu.wpi.first.wpilibj2.command.button.Trigger;
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   private final ShooterSubsystem m_ShooterSubsystem = new ShooterSubsystem();
-  private final TankSubsystem m_tankSubsystem = new TankSubsystem();
+  private static final TankSubsystem m_tankSubsystem = new TankSubsystem();
   private final ClimbSubsystem m_ClimbSubsystem = new ClimbSubsystem();
 
   private final IntakeCommand m_IntakeCommand = new IntakeCommand(m_ShooterSubsystem);
@@ -70,6 +70,10 @@ public class RobotContainer {
 
     // Schedule `exampleMethodCommand` when the Xbox controller's B button is pressed,
     // cancelling on release.
+  }
+
+  public static TankSubsystem getTankSubsystem() {
+    return m_tankSubsystem;
   }
 
   /**
