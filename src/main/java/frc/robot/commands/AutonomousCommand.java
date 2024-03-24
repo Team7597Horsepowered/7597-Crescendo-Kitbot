@@ -25,10 +25,17 @@ public class AutonomousCommand extends Command {
   private ScheduledExecutorService executor = Executors.newSingleThreadScheduledExecutor();
 
   public AutonomousCommand() {
+<<<<<<< HEAD
     //execute();
   }
 
       /*private void scheduleDisable(long timeToWait) {
+=======
+    execute();
+  }
+
+    private void scheduleDisable(long timeToWait) {
+>>>>>>> f63dcbc957ba732a03dd4cb1b34a61fa04a9b223
       executor.scheduleWithFixedDelay(AutonomousCommand::disable, 0, timeToWait, TimeUnit.SECONDS);
     }
 
@@ -37,7 +44,11 @@ public class AutonomousCommand extends Command {
     }
 
     private static void drive() {
+<<<<<<< HEAD
       TankSubsystem system = new TankSubsystem();
+=======
+      TankSubsystem system = RobotContainer.getTankSubsystem();
+>>>>>>> f63dcbc957ba732a03dd4cb1b34a61fa04a9b223
       system.setBoth(10, 10);
     }
 
@@ -49,8 +60,13 @@ public class AutonomousCommand extends Command {
         scheduleDisable(10);
     }
 
+<<<<<<< HEAD
      public static void disable() {
       TankSubsystem system = new TankSubsystem();
+=======
+    public static void disable() {
+      TankSubsystem system = RobotContainer.getTankSubsystem();
+>>>>>>> f63dcbc957ba732a03dd4cb1b34a61fa04a9b223
       system.setBoth(0, 0);
     }
 
@@ -58,5 +74,9 @@ public class AutonomousCommand extends Command {
     public void end(boolean interrupted) {
       m_IntakeCommand.end(true);
         disable();
+<<<<<<< HEAD
     } */
+=======
+    }
+>>>>>>> f63dcbc957ba732a03dd4cb1b34a61fa04a9b223
 }
