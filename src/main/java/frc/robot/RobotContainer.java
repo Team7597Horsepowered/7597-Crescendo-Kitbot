@@ -4,16 +4,19 @@
 
 package frc.robot;
 
+import frc.robot.commands.AutonomousCommand;
 import frc.robot.commands.Autos;
 import frc.robot.commands.ClimbDown;
 import frc.robot.commands.ClimbExtender;
 import frc.robot.commands.IntakeCommand;
+import frc.robot.commands.RightArmRetract;
 import frc.robot.commands.ShootCommand;
 import frc.robot.commands.TankCommand;
 import frc.robot.subsystems.ClimbSubsystem;
 import frc.robot.subsystems.ShooterSubsystem;
 import frc.robot.subsystems.TankSubsystem;
 import edu.wpi.first.wpilibj2.command.Command;
+import edu.wpi.first.wpilibj2.command.ScheduleCommand;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
 import edu.wpi.first.wpilibj2.command.button.Trigger;
 
@@ -34,6 +37,8 @@ public class RobotContainer {
   private final TankCommand m_tankCommand = new TankCommand(m_tankSubsystem);
   private final ClimbExtender m_ClimbExtender = new ClimbExtender(m_ClimbSubsystem);
   private final ClimbDown m_ClimbDown = new ClimbDown(m_ClimbSubsystem);
+  private final RightArmRetract m_RightArmRetract = new RightArmRetract(m_ClimbSubsystem);
+  //private final AutonomousCommand command = new AutonomousCommand();
 
   // Replace with CommandPS4Controller or CommandJoystick if needed
   public static final CommandXboxController m_driverController =
@@ -61,13 +66,17 @@ public class RobotContainer {
   private void configureBindings() {
     m_operatorController.a().whileTrue(m_ShootCommand);
     m_operatorController.leftTrigger().whileTrue(m_IntakeCommand);
-
+    m_operatorController.b().whileTrue(m_RightArmRetract);
     m_operatorController.leftBumper().whileTrue(m_ClimbExtender);
     m_operatorController.rightBumper().whileTrue(m_ClimbDown);
 
     // Schedule `exampleMethodCommand` when the Xbox controller's B button is pressed,
     // cancelling on release.
   }
+
+  /*public static TankSubsystem getTankSubsystem() {
+    return m_tankSubsystem;
+  } */
 
   /**
    * Use this to pass the autonomous command to the main {@link Robot} class.

@@ -23,10 +23,10 @@ public class ShootCommand extends Command {
   // Called every time the scheduler runs while the command is scheduled.
   @Override
   public void execute() {
-    m_ShooterSubsystem.setTopSpeed(Constants.shootSpeed);
+    m_ShooterSubsystem.setTopSpeed(1.0);
     if(RobotContainer.m_operatorController.getHID().getRightTriggerAxis() > Constants.joystickDeadband){
         System.out.println("test'");
-        m_ShooterSubsystem.setBottomSpeed(Constants.shootSpeed);
+        m_ShooterSubsystem.setBottomSpeed(1.0);
     }
   }
 
