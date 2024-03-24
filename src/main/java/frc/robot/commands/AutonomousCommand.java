@@ -13,7 +13,7 @@ import frc.robot.subsystems.ShooterSubsystem;
 import frc.robot.subsystems.TankSubsystem;
 
 public class AutonomousCommand extends Command {
-    private final ShooterSubsystem m_ShooterSubsystem = new ShooterSubsystem();
+  private final ShooterSubsystem m_ShooterSubsystem = new ShooterSubsystem();
   private final TankSubsystem m_tankSubsystem = new TankSubsystem();
   private final ClimbSubsystem m_ClimbSubsystem = new ClimbSubsystem();
 
