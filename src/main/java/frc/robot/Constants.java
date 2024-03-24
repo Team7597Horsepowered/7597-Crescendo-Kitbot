@@ -26,10 +26,10 @@ public final class Constants {
 
   public static final int driverPort = 0;
   public static final int operatorPort = 1;
-  public static final double joystickDeadband = 0.01;
+  public static final double joystickDeadband = 0.08;
 
   public static final double intakeSpeed = -0.5;
   public static final double shootSpeed = 1;
 
-  public static double climbSpeed = 0.6;
+  public static double climbSpeed = 0.35;
 }

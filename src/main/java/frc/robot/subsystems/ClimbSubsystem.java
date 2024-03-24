@@ -28,28 +28,14 @@ public class ClimbSubsystem extends SubsystemBase {
   }
 
   public void extend(){
-    leftClimb.setInverted(false);
-    rightClimb.setInverted(true);
     leftClimb.set(ControlMode.PercentOutput, Constants.climbSpeed);
     rightClimb.set(ControlMode.PercentOutput, Constants.climbSpeed);
   }
 
   public void setRetract(){
-    leftClimb.setInverted(true);
-    rightClimb.setInverted(false);
     leftClimb.set(ControlMode.PercentOutput, Constants.climbSpeed);
-    rightClimb.set(ControlMode.PercentOutput, Constants.climbSpeed);
+    leftClimb.set(ControlMode.PercentOutput, Constants.climbSpeed);
 
-  }
-
-  public void setRightRetract() {
-    rightClimb.setInverted(false);
-    rightClimb.set(ControlMode.PercentOutput, Constants.climbSpeed);
-  }
-
-  public void stop() {
-    leftClimb.set(ControlMode.PercentOutput, 0.0);
-    rightClimb.set(ControlMode.PercentOutput, 0.0);
   }
   @Override
   public void periodic() {
