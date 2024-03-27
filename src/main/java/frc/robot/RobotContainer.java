@@ -4,7 +4,6 @@
 
 package frc.robot;
 
-import frc.robot.commands.AutonomousCommand;
 import frc.robot.commands.Autos;
 import frc.robot.commands.ClimbDown;
 import frc.robot.commands.ClimbExtender;
@@ -37,7 +36,6 @@ public class RobotContainer {
   private final ShootCommand m_ShootCommand = new ShootCommand(m_ShooterSubsystem);
   private final ClimbExtender m_ClimbExtender = new ClimbExtender(m_ClimbSubsystem);
   private final ClimbDown m_ClimbDown = new ClimbDown(m_ClimbSubsystem);
-  private final AutonomousCommand command = new AutonomousCommand();
   private final SwerveSubsystem m_swerveSubsystem = new SwerveSubsystem(new File(Filesystem.getDeployDirectory(), "swerve"));
 
   // Replace with CommandPS4Controller or CommandJoystick if needed
