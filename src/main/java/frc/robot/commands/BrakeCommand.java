@@ -22,7 +22,6 @@ public class BrakeCommand extends Command {
 
   @Override
   public void end(boolean interrupted) {
-      leftMotor.setIdleMode(IdleMode.kCoast);
-      rightMotor.setIdleMode(IdleMode.kCoast);
+    
   }
 }
