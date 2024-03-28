@@ -36,7 +36,7 @@ public final class Constants {
 
   public static double climbSpeed = 0.35;
 
-  public static final double ROBOT_MASS = 75 * 0.453592; // 32lbs * kg per pound
+  public static final double ROBOT_MASS = 75 * 0.453592; // 75lbs * kg per pound
 
   public static final double maxSpeed = 4;
 }
