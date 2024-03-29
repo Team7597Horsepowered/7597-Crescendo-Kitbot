@@ -35,12 +35,24 @@ public class ClimbSubsystem extends SubsystemBase {
   public void setRetract(){
     leftClimb.set(-Constants.climbSpeed);
     rightClimb.set(-Constants.climbSpeed);
+  }
 
+  public void retractLeft() {
+    leftClimb.set(-Constants.climbSpeed);
+  }
+
+  public void retractRight() {
+    rightClimb.set(-Constants.climbSpeed);
   }
 
   public void setBrake() {
     leftClimb.setIdleMode(IdleMode.kBrake);
     rightClimb.setIdleMode(IdleMode.kBrake);
+  }
+
+  public void end() {
+    leftClimb.set(0);
+    rightClimb.set(0);
   }
 
   @Override

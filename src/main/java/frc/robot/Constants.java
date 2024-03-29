@@ -31,5 +31,5 @@ public final class Constants {
   public static final double intakeSpeed = -0.5;
   public static final double shootSpeed = 1;
 
-  public static double climbSpeed = 1;
+  public static double climbSpeed = 0.50;
 }
