@@ -51,6 +51,7 @@ public class ClimbSubsystem extends SubsystemBase {
   }
 
   public void end() {
+    setBrake();
     leftClimb.set(0);
     rightClimb.set(0);
   }
