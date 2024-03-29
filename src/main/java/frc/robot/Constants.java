@@ -21,8 +21,8 @@ public final class Constants {
   public static final int topShooterMotor = 5;
   public static final int bottomShooterMotor = 6;
 
-  public static final int leftClimb = 7;
-  public static final int rightClimb = 8;
+  public static final int leftClimb = 8;
+  public static final int rightClimb = 7;
 
   public static final int driverPort = 0;
   public static final int operatorPort = 1;
@@ -31,5 +31,5 @@ public final class Constants {
   public static final double intakeSpeed = -0.5;
   public static final double shootSpeed = 1;
 
-  public static double climbSpeed = 0.35;
+  public static double climbSpeed = 1;
 }

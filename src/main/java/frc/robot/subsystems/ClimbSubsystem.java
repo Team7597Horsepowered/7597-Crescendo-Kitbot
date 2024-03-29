@@ -24,7 +24,6 @@ public class ClimbSubsystem extends SubsystemBase {
     leftClimb = new CANSparkMax(Constants.leftClimb, MotorType.kBrushless);
     rightClimb = new CANSparkMax(Constants.rightClimb, MotorType.kBrushless);
     leftClimb.setInverted(true);
-    setBrake();
   }
 
   public void extend(){
